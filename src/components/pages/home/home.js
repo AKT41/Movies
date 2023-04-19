@@ -9,7 +9,7 @@ export default function home() {
     <div className="container">
       <Welcome />
       <Navbar />
-      <MoviesCard />
+      <MoviesCard />  ,
     </div>
   );
 }

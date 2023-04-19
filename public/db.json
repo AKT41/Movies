@@ -13,7 +13,6 @@
     "Mystery",
     "Biography",
     "Action",
-    "Film-Noir",
     "Romance",
     "Sci-Fi",
     "War",
@@ -721,7 +720,7 @@
       "actors": "Tom Hanks, Halle Berry, Jim Broadbent, Hugo Weaving",
       "plot": "An exploration of how the actions of individual lives impact one another in the past, present and future, as one soul is shaped from a killer into a hero, and an act of kindness ripples across centuries to inspire a revolution.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTczMTgxMjc4NF5BMl5BanBnXkFtZTcwNjM5MTA2OA@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 8.4
     },
     {
       "id": 99,
@@ -733,7 +732,7 @@
       "actors": "Naomi Watts, Ewan McGregor, Tom Holland, Samuel Joslin",
       "plot": "The story of a tourist family in Thailand caught in the destruction and chaotic aftermath of the 2004 Indian Ocean tsunami.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA5NTA3NzQ5Nl5BMl5BanBnXkFtZTcwOTYxNjY0OA@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 7.6
     },
     {
       "id": 100,
@@ -745,9 +744,8 @@
       "actors": "Louis Wolheim, Lew Ayres, John Wray, Arnold Lucy",
       "plot": "A young soldier faces profound disillusionment in the soul-destroying horror of World War I.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTM5OTg2NDY1NF5BMl5BanBnXkFtZTcwNTQ4MTMwNw@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 9.2
     },
-
     {
       "id": 102,
       "title": "Dallas Buyers Club",
@@ -758,7 +756,7 @@
       "actors": "Matthew McConaughey, Jennifer Garner, Jared Leto, Denis O'Hare",
       "plot": "In 1985 Dallas, electrician and hustler Ron Woodroof works around the system to help AIDS patients get the medication they need after he is diagnosed with the disease.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwMTA4MzgyNF5BMl5BanBnXkFtZTgwMjEyMjE0MDE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 8.1
     },
 
     {
@@ -771,7 +769,7 @@
       "actors": "Ethan Hawke, Julie Delpy, Andrea Eckert, Hanno Pöschl",
       "plot": "A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQyMTM3MTQxMl5BMl5BanBnXkFtZTcwMDAzNjQ4Mg@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "8.7"
     },
     {
       "id": 105,
@@ -783,9 +781,8 @@
       "actors": "Johnny Depp, Aaron Eckhart, Michael Rispoli, Amber Heard",
       "plot": "American journalist Paul Kemp takes on a freelance job in Puerto Rico for a local newspaper during the 1960s and struggles to find a balance between island culture and the expatriates who live there.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM5ODA4MjYxM15BMl5BanBnXkFtZTcwMTM3NTE5Ng@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 6.5
     },
-
     {
       "id": 107,
       "title": "Chinatown",
@@ -796,7 +793,7 @@
       "actors": "Jack Nicholson, Faye Dunaway, John Huston, Perry Lopez",
       "plot": "A private detective hired to expose an adulterer finds himself caught up in a web of deceit, corruption and murder.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BN2YyNDE5NzItMjAwNC00MGQxLTllNjktZGIzMWFkZjA3OWQ0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 9.0
     },
     {
       "id": 108,
@@ -808,7 +805,7 @@
       "actors": "Brendan Gleeson, Chris O'Dowd, Kelly Reilly, Aidan Gillen",
       "plot": "After he is threatened during a confession, a good-natured priest must battle the dark forces closing in around him.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc3MjQ1MjE2M15BMl5BanBnXkFtZTgwNTMzNjE4MTE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 7.3
     },
     {
       "id": 110,
@@ -820,7 +817,7 @@
       "actors": "Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takashi Naitô",
       "plot": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjYxMDcyMzIzNl5BMl5BanBnXkFtZTYwNDg2MDU3._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "7.8"
     },
     {
       "id": 111,
@@ -832,7 +829,7 @@
       "actors": "Catherine Deneuve, Vincent Perez, Linh Dan Pham, Jean Yanne",
       "plot": "This story is set in 1930, at the time when French colonial rule in Indochina is ending. A widowed French woman who works in the rubber fields, raises a Vietnamese princess as if she was ...",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM1MTkzNzA3NF5BMl5BanBnXkFtZTYwNTI2MzU5._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "6.9"
     },
     {
       "id": 112,
@@ -844,7 +841,7 @@
       "actors": "Michael Keaton, Emma Stone, Kenny Chin, Jamahl Garrison-Lowe",
       "plot": "Illustrated upon the progress of his latest Broadway play, a former popular actor's struggle to cope with his current life as a wasted actor is shown.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "8.4"
     },
     {
       "id": 113,
@@ -856,7 +853,7 @@
       "actors": "Ellar Coltrane, Patricia Arquette, Elijah Smith, Lorelei Linklater",
       "plot": "The life of Mason, from early childhood to his arrival at college.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYzNDc2MDc0N15BMl5BanBnXkFtZTgwOTcwMDQ5MTE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "9.2"
     },
     {
       "id": 114,
@@ -868,8 +865,9 @@
       "actors": "Martin Balsam, John Fiedler, Lee J. Cobb, E.G. Marshall",
       "plot": "A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODQwOTc5MDM2N15BMl5BanBnXkFtZTcwODQxNTEzNA@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "8.2"
     },
+
     {
       "id": 115,
       "title": "The Imitation Game",
@@ -880,7 +878,7 @@
       "actors": "Benedict Cumberbatch, Keira Knightley, Matthew Goode, Rory Kinnear",
       "plot": "During World War II, mathematician Alan Turing tries to crack the enigma code with help from fellow mathematicians.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDkwNTEyMzkzNl5BMl5BanBnXkFtZTgwNTAwNzk3MjE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "8.9"
     },
     {
       "id": 116,
@@ -892,7 +890,7 @@
       "actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
       "plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "9.2"
     },
     {
       "id": 117,
@@ -904,7 +902,7 @@
       "actors": "David Schwimmer, Simon Pegg, Alice Eve, Natascha McElhone",
       "plot": "A frustrated, unemployed teacher joining forces with a scammer and his girlfriend in a blackmailing scheme.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY5NTc2NjYwOV5BMl5BanBnXkFtZTcwMzk5OTY0MQ@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "4.7"
     },
     {
       "id": 118,
@@ -916,7 +914,7 @@
       "actors": "Jürgen Prochnow, Herbert Grönemeyer, Klaus Wennemann, Hubertus Bengsch",
       "plot": "The claustrophobic world of a WWII German U-boat; boredom, filth, and sheer terror.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE5Mzk5OTQ0Nl5BMl5BanBnXkFtZTYwNzUwMTQ5._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "7.8"
     },
     {
       "id": 119,
@@ -928,7 +926,7 @@
       "actors": "Mike Myers, Eddie Murphy, Cameron Diaz, Julie Andrews",
       "plot": "Princess Fiona's parents invite her and Shrek to dinner to celebrate her marriage. If only they knew the newlyweds were both ogres.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4MTMwNjI4M15BMl5BanBnXkFtZTcwMjExMzUyMQ@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "6.5"
     },
     {
       "id": 120,
@@ -940,7 +938,7 @@
       "actors": "Jessica Alba, Devon Aoki, Alexis Bledel, Powers Boothe",
       "plot": "A film that explores the dark and miserable town, Basin City, and tells the story of three different people, all caught up in violent corruption.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODZmYjMwNzEtNzVhNC00ZTRmLTk2M2UtNzE1MTQ2ZDAxNjc2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "8.3"
     },
     {
       "id": 121,
@@ -952,7 +950,7 @@
       "actors": "Bruce Dern, Will Forte, June Squibb, Bob Odenkirk",
       "plot": "An aging, booze-addled father makes the trip from Montana to Nebraska with his estranged son in order to claim a million-dollar Mega Sweepstakes Marketing prize.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU2Mjk2NDkyMl5BMl5BanBnXkFtZTgwNTk0NzcyMDE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "7.2"
     },
     {
       "id": 122,
@@ -964,7 +962,7 @@
       "actors": "Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow",
       "plot": "After his swamp is filled with magical creatures, an ogre agrees to rescue a princess for a villainous lord in order to get his land back.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2NTE1NTE0M15BMl5BanBnXkFtZTgwNjY4NTYxMTE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "8.6"
     },
     {
       "id": 123,
@@ -976,7 +974,7 @@
       "actors": "Brad Pitt, Angelina Jolie, Vince Vaughn, Adam Brody",
       "plot": "A bored married couple is surprised to learn that they are both assassins hired by competing agencies to kill each other.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxMzcxNzQzOF5BMl5BanBnXkFtZTcwMzQxNjUyMw@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "4.9"
     },
     {
       "id": 124,
@@ -988,7 +986,7 @@
       "actors": "Antonio Banderas, Angelina Jolie, Thomas Jane, Jack Thompson",
       "plot": "A woman along with her lover, plan to con a rich man by marrying him and on earning his trust running away with all his money. Everything goes as planned until she actually begins to fall in love with him.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODg3Mjg0MDY4M15BMl5BanBnXkFtZTcwNjY5MDQ2NA@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "6.5"
     },
 
     {
@@ -1001,7 +999,7 @@
       "actors": "Steve Carell, Jason Segel, Russell Brand, Julie Andrews",
       "plot": "When a criminal mastermind uses a trio of orphan girls as pawns for a grand scheme, he finds their love is profoundly changing him for the better.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "9.1"
     },
 
     {
@@ -1014,7 +1012,7 @@
       "actors": "Ian McKellen, Martin Freeman, Richard Armitage, Ken Stott",
       "plot": "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "8.8"
     },
     {
       "id": 130,
@@ -1026,7 +1024,7 @@
       "actors": "Lisa Adam, Frank Aldridge, Amitabh Bachchan, Steve Bisley",
       "plot": "A writer and wall street trader, Nick, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxNTk1ODcxNl5BMl5BanBnXkFtZTcwMDI1OTMzOQ@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 8.5
     },
     {
       "id": 131,
@@ -1038,9 +1036,8 @@
       "actors": "Ray Romano, John Leguizamo, Denis Leary, Goran Visnjic",
       "plot": "Set during the Ice Age, a sabertooth tiger, a sloth, and a wooly mammoth find a lost human infant, and they try to return him to his tribe.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyNzI1ODA0MF5BMl5BanBnXkFtZTYwODIxODY3._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 7.2
     },
-
     {
       "id": 133,
       "title": "The Lord of the Rings: The Two Towers",
@@ -1051,7 +1048,7 @@
       "actors": "Bruce Allpress, Sean Astin, John Bach, Sala Baker",
       "plot": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAyNDU0NjY4NTheQTJeQWpwZ15BbWU2MDk4MTY2Nw@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 9.1
     },
     {
       "id": 134,
@@ -1063,7 +1060,7 @@
       "actors": "Domhnall Gleeson, Corey Johnson, Oscar Isaac, Alicia Vikander",
       "plot": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a breath-taking humanoid A.I.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 7.9
     },
     {
       "id": 135,
@@ -1075,7 +1072,7 @@
       "actors": "Eddie Redmayne, Felicity Jones, Tom Prior, Sophie Perry",
       "plot": "A look at the relationship between the famous physicist Stephen Hawking and his wife.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAwMTU4MDA3NDNeQTJeQWpwZ15BbWU4MDk4NTMxNTIx._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 8.2
     },
     {
       "id": 136,
@@ -1087,7 +1084,7 @@
       "actors": "Richard Chamberlain, Toshirô Mifune, Yôko Shimada, Furankî Sakai",
       "plot": "A English navigator becomes both a player and pawn in the complex political games in feudal Japan.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY1ODI4NzYxMl5BMl5BanBnXkFtZTcwNDA4MzUxMQ@@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": 6.5
     },
     {
       "id": 137,
@@ -1099,7 +1096,7 @@
       "actors": "Mark Ruffalo, Michael Keaton, Rachel McAdams, Liev Schreiber",
       "plot": "The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIyOTM5OTIzNV5BMl5BanBnXkFtZTgwMDkzODE2NjE@._V1_SX300.jpg",
-      "imdb": ""
+      "imdb": "4.6"
     },
 
     {

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import "../../styles/navbar.css";
 import { Link } from "react-router-dom";
-import { MoviesContext } from "../../MoviesContext";
+import { MoviesContext } from "../../../MoviesContext";
 
 export default function Navbar() {
   const { movies } = useContext(MoviesContext);
@@ -69,9 +69,6 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="navbar-menu">
-          <li>
-            <span>|</span>
-          </li>
           <li className="navbar-menu-item">
             <Link to="/watched">Watched</Link>
           </li>
@@ -85,34 +82,42 @@ export default function Navbar() {
       </nav>
       <div
         className="search-result"
-        style={showCloseIcon ? { height: "100%", top: "0" } : null}
+        style={
+          showCloseIcon ? { height: "100%", top: "0", display: "flex" } : null
+        }
       >
         {searchedMoviesNotFound}
         {displayStyle === "flex" && (
           <div className="displaystyle" style={{ display: displayStyle }}>
             {filteredMovies.map((movie) => (
-              <div className="movies-card" key={movie.id}>
-                <div className="movies-card-image">
-                  <img src={movie.posterUrl} alt={movie.title} />
-                  <div className="movies-card-genre">
-                    {movie.genres
-                      .map((genre) => <span key={genre}>{genre}</span>)
-                      .reduce((prev, curr) => [prev, curr])}
+              <Link
+                to={`/movie/${movie.id}`}
+                key={movie.id}
+                onClick={handleClearClick}
+              >
+                <div className="movies-card" key={movie.id}>
+                  <div className="movies-card-image">
+                    <img src={movie.posterUrl} alt={movie.title} />
+                    <div className="movies-card-genre">
+                      {movie.genres
+                        .map((genre) => <span key={genre}>{genre}</span>)
+                        .reduce((prev, curr) => [prev, curr])}
+                    </div>
+                  </div>
+                  <div title={movie.title} className="movies-card-title">
+                    <h2>{movie.title}</h2>
+                  </div>
+                  <div className="movies-card-description">
+                    <p>{movie.plot}</p>
+                  </div>
+                  <div className="movies-card-year">
+                    <p>{movie.year}</p>
+                  </div>
+                  <div className="movies-card-imbd">
+                    <p>{movie.imdb}</p>
                   </div>
                 </div>
-                <div title={movie.title} className="movies-card-title">
-                  <h2>{movie.title}</h2>
-                </div>
-                <div className="movies-card-description">
-                  <p>{movie.plot}</p>
-                </div>
-                <div className="movies-card-year">
-                  <p>{movie.year}</p>
-                </div>
-                <div className="movies-card-imbd">
-                  <p>{movie.imdb}</p>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}

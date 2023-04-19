@@ -90,12 +90,12 @@ a {
     overflow-y: scroll;
     margin: 0 auto;
     position: relative;
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: row;
     position: absolute;
     z-index: 1000;
-    margin-top: 3rem;
+    margin-top: 4rem;
     padding-bottom: 2rem;
     background: linear-gradient(45deg, rgb(0, 40, 70) -4.8%, rgb(255, 115, 115) 82.7%, rgb(255, 175, 123) 97.2%);
 }

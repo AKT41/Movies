@@ -19,7 +19,10 @@ export default function Watched() {
     setWatchedMovies(updatedWatchedMovies);
     localStorage.setItem("watchedMovies", JSON.stringify(updatedWatchedMovies));
   };
-
+  const removeAllFromWatched = () => {
+    localStorage.removeItem("watchedMovies");
+    setWatchedMovies([]);
+  };
   const watchedMovieTitles = movies
     .filter((movie) => watchedMovies.includes(movie.id))
     .map((movie) => (
@@ -44,11 +47,11 @@ export default function Watched() {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              strokeWidth="2"
               stroke="currentColor"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M18 6l-12 12"></path>
@@ -63,7 +66,14 @@ export default function Watched() {
     <div className="watched-container">
       {" "}
       <h2>
-        Watched <span>({watchedMovieTitles.length})</span>
+        <div>
+          Watcheds <span>({watchedMovieTitles.length})</span>
+        </div>
+        {watchedMovieTitles.length > 0 && (
+          <div className="remove-all" onClick={removeAllFromWatched}>
+            <p>Remove all</p>
+          </div>
+        )}
       </h2>
       <div className="watcheds">
         {watchedMovieTitles.length > 0 ? (

@@ -19,7 +19,10 @@ export default function Favorites() {
     setLikedMovies(updatedLikedMovies);
     localStorage.setItem("likedMovies", JSON.stringify(updatedLikedMovies));
   };
-
+  const removeAllFromFavorites = () => {
+    localStorage.removeItem("likedMovies");
+    setLikedMovies([]);
+  };
   const likedMovieTitles = movies
     .filter((movie) => likedMovies.includes(movie.id))
     .map((movie) => (
@@ -44,11 +47,11 @@ export default function Favorites() {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              stroke-width="2"
+              strokeWidth="2"
               stroke="currentColor"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M18 6l-12 12"></path>
@@ -62,7 +65,14 @@ export default function Favorites() {
   return (
     <div className="watched-container">
       <h2>
-        Favorites <span>({likedMovieTitles.length})</span>
+        <div>
+          Favorites <span>({likedMovieTitles.length})</span>
+        </div>
+        {likedMovieTitles.length > 0 && (
+          <div className="remove-all" onClick={removeAllFromFavorites}>
+            <p>Remove all</p>
+          </div>
+        )}
       </h2>
       <div className="watcheds">
         {" "}

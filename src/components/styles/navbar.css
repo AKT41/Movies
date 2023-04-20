@@ -15,7 +15,8 @@
     position: fixed;
     top: 0;
     z-index: 1100;
-    width: 75rem;
+    max-width: 75rem;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -23,11 +24,12 @@
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
+    color: #fff;
 }
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #bbbbbb;
     transition: all 0.3s ease-in-out;
     padding: 5px;
     border-radius: 10px;
@@ -45,7 +47,7 @@ a {
 }
 
 .navbar-menu-item:hover>a {
-    background-color: rgba(191, 191, 191, 0.458);
+    color: #fff;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }

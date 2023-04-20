@@ -70,6 +70,12 @@ export default function Navbar() {
         </div>
         <ul className="navbar-menu">
           <li className="navbar-menu-item">
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <span>|</span>
+          </li>
+          <li className="navbar-menu-item">
             <Link to="/watched">Watched</Link>
           </li>
           <li>

@@ -43,10 +43,11 @@
     height: 100%;
     border-radius: 5px;
     transition: all 0.3s ease;
+    max-height: 350px;
 }
 
 .movies-card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.622);
 }
 
 .movies-card-title {
@@ -84,7 +85,7 @@
 
 
 .movies-card-genre span {
-    margin: 0 5px;
+    margin: 2px 5px;
     font-size: 0.8rem;
     font-weight: 400;
     color: #fff;
@@ -97,15 +98,14 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: -102px;
+    bottom: 0;
     right: 0;
     z-index: 997;
     transition: all 0.3s ease;
     padding: 10px;
     background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
-    border-bottom-right-radius: 15px;
     border-top-left-radius: 15px;
-
+    user-select: none;
 }
 
 .movies-card-imbd p {
@@ -143,7 +143,6 @@
 
 .movies-card-description {
     margin: 10px 0;
-    margin-bottom: 2rem;
     padding: 10px;
     font-size: 0.8rem;
     font-weight: 400;
@@ -154,14 +153,16 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .movies-filter {
     display: none;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
 .active {
@@ -202,13 +203,29 @@
 
 .filter-toggle {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    align-content: center;
     border-radius: 50%;
-    width: 100% ;
+    width: 75%;
     height: 30px;
-    cursor: pointer;
-    margin: 0 5px;
+    position: relative;
+}
+
+.containermoviecard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.127);
+    border-radius: 5px;
 }
 
 .filter-toggle svg {
@@ -216,14 +233,17 @@
     height: 30px;
     cursor: pointer;
     margin: 0 5px;
+    position: absolute;
+    right: 0;
 }
 
 .filter-toggle .icon-tabler-adjustments-alt {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 15px;
     fill: #fff;
+
 }
 
 

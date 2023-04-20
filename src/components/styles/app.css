@@ -170,3 +170,8 @@ body {
 	background: linear-gradient(to top, #09203f 0%, #537895 100%);
 	background-repeat: no-repeat;
 }
+
+::selection {
+	background: #f5c518;
+	color: #fff;
+}

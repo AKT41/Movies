@@ -6,12 +6,46 @@ import { Link } from "react-router-dom";
 export default function MoviesCard() {
   const { movies } = useContext(MoviesContext);
   const [filter, setFilter] = useState({ imdb: 0, genres: [], year: 0 });
+  const [sortedMovies, setSortedMovies] = useState(movies);
+
+  const sortMovies = (movies, sortBy) => {
+    switch (sortBy) {
+      case "1":
+        return movies.sort((a, b) => a.year - b.year);
+      case "3":
+        return movies.sort((a, b) => b.imdb - a.imdb);
+      case "5":
+        return movies.sort((a, b) => a.title.localeCompare(b.title));
+      case "6":
+        return movies.sort((a, b) => b.title.localeCompare(a.title));
+      case "2":
+        return movies.sort((a, b) => b.year - a.year);
+      case "4":
+        return movies.sort((a, b) => a.imdb - b.imdb);
+      default:
+        return movies;
+    }
+  };
+
+  const handleResetClick = () => {
+    setFilter({ imdb: 0, genres: [], year: 0, sortby: "0" });
+
+    const latestOption = document.querySelector("#sortby option[value='5']");
+    const latestSortOrder = latestOption.getAttribute("data-sort-order");
+    const sortedMovies = sortMovies(movies, latestSortOrder);
+
+    setSortedMovies(sortedMovies);
+    document.getElementById("sortby").value = "0";
+  };
 
   const handleFilterChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
 
     setFilter({ ...filter, [name]: value });
+
+    const sortedMovies = sortMovies(movies, value);
+    setSortedMovies(sortedMovies);
   };
 
   const filteredMovies = movies.filter((movie) => {
@@ -39,96 +73,104 @@ export default function MoviesCard() {
     filter.classList.toggle("active");
   };
 
-  const filteredMoviesE = movies.filter((movie) => {
-    return (
-      movie.imdb >= filter.imdb &&
-      (filter.genres[0] === "" || movie.genres.includes(filter.genres[0])) &&
-      (filter.year === 0 || movie.year === filter.year)
-    );
-  });
-
   return (
-    <>
+    <div className="containermoviecard">
       <h1 className="allmovies">Movies</h1>
       <div className="filter-toggle">
-        <p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-arrows-sort"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M3 9l4 -4l4 4m-4 -4v14"></path>
-            <path d="M21 15l-4 4l-4 -4m4 4v-14"></path>
-          </svg>
-        </p>
-        <p onClick={handleFilterToggle}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-adjustments-alt"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="currentColor"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 8h4v4h-4z"></path>
-            <path d="M6 4l0 4"></path>
-            <path d="M6 12l0 8"></path>
-            <path d="M10 14h4v4h-4z"></path>
-            <path d="M12 4l0 10"></path>
-            <path d="M12 18l0 2"></path>
-            <path d="M16 5h4v4h-4z"></path>
-            <path d="M18 4l0 1"></path>
-            <path d="M18 9l0 11"></path>
-          </svg>
-        </p>
+        <svg
+          onClick={handleFilterToggle}
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon-tabler icon-tabler-adjustments-alt"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+          stroke="currentColor"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 8h4v4h-4z"></path>
+          <path d="M6 4l0 4"></path>
+          <path d="M6 12l0 8"></path>
+          <path d="M10 14h4v4h-4z"></path>
+          <path d="M12 4l0 10"></path>
+          <path d="M12 18l0 2"></path>
+          <path d="M16 5h4v4h-4z"></path>
+          <path d="M18 4l0 1"></path>
+          <path d="M18 9l0 11"></path>
+        </svg>
       </div>
 
       <div className="movies-filter" id="filter">
-        <label class="select" for="imdb">
-          <select
-            id="imdb"
-            name="imdb"
-            value={filter.imdb}
-            onChange={handleFilterChange}
-            required="required"
-          >
-            <option value={0}>IMDB</option>
-            <option value={5}>5+</option>
-            <option value={6}>6+</option>
-            <option value={7.5}>7.5+</option>
-            <option value={8}>8+</option>
-            <option value={8.5}>8.5+</option>
-            <option value={9}>9+</option>
-          </select>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-chevron-down"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="currentColor"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M6 9l6 6l6 -6"></path>
-          </svg>
-        </label>
+        <div className="movies-filter-items">
+          <label className="select" htmlFor="sortby">
+            <select
+              id="sortby"
+              name="sortby"
+              required="required"
+              onChange={handleFilterChange}
+            >
+              <option value="0">Sort by</option>
+              <option value="2">Latest</option>
+              <option value="1">Oldest</option>
+              <option value="3">Top IMDb</option>
+              <option value="4">Lowest IMDb</option>
+              <option value="5">A-Z</option>
+              <option value="6">Z-A</option>
+            </select>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-chevron-down"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 9l6 6l6 -6"></path>
+            </svg>
+          </label>
+        </div>
+        <div className="movies-filter-item">
+          <label className="select" htmlFor="imdb">
+            <select
+              id="imdb"
+              name="imdb"
+              value={filter.imdb}
+              onChange={handleFilterChange}
+              required="required"
+            >
+              <option value="">IMDb</option>
+              <option value={5}>5+</option>
+              <option value={6}>6+</option>
+              <option value={7.5}>7.5+</option>
+              <option value={8}>8+</option>
+              <option value={8.5}>8.5+</option>
+              <option value={9}>9+</option>
+            </select>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-chevron-down"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 9l6 6l6 -6"></path>
+            </svg>
+          </label>
+        </div>
 
         <div className="movies-filter-item">
           <label className="select" htmlFor="genre-select">
@@ -139,7 +181,7 @@ export default function MoviesCard() {
                 setFilter({ ...filter, genres: [event.target.value] })
               }
             >
-              <option value="">Category</option>
+              <option>Category</option>
               {movies
                 .flatMap((movie) => movie.genres)
                 .filter((genre, index, self) => self.indexOf(genre) === index)
@@ -152,7 +194,7 @@ export default function MoviesCard() {
             </select>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-chevron-down"
+              className="icon icon-tabler icon-tabler-chevron-down"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -189,7 +231,7 @@ export default function MoviesCard() {
             </select>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-chevron-down"
+              className="icon icon-tabler icon-tabler-chevron-down"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -204,21 +246,18 @@ export default function MoviesCard() {
             </svg>
           </label>
         </div>
-        <p
-          className="reset-btn"
-          onClick={() => setFilter({ imdb: 0, genres: [], year: 0 })}
-        >
+        <p className="reset-btn" onClick={handleResetClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-refresh"
+            className="icon icon-tabler icon-tabler-refresh"
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            stroke-width="2"
+            strokeWidth="2"
             stroke="currentColor"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path>
@@ -284,15 +323,12 @@ export default function MoviesCard() {
           <div className="notfoundmovie">
             <p>
               No movies found. You can
-              <span onClick={() => setFilter({ imdb: 0, genres: [], year: 0 })}>
-                {" "}
-                reset{" "}
-              </span>
+              <span onClick={handleResetClick}> reset </span>
               filters if you want.
             </p>
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }

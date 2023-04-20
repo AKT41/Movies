@@ -1,0 +1,18 @@
+.recommended-movies-container {
+    border-top: 1px solid #e5e5e586;
+    padding: 20px 0 0 0;
+    margin: 20px 0 0 0;
+
+}
+
+.recommended-movies {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+}
+
+
+.recommended-movies img {
+    width: 100px;
+    height: 150px;
+}

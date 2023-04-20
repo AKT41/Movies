@@ -73,6 +73,24 @@ export default function MoviesCard() {
     filter.classList.toggle("active");
   };
 
+  const [likedMovies, setLikedMovies] = useState(
+    JSON.parse(localStorage.getItem("likedMovies")) || []
+  );
+
+  const handleLike = (movie) => {
+    const likedMovieIds = JSON.parse(localStorage.getItem("likedMovies")) || [];
+    const movieIndex = likedMovieIds.indexOf(movie.id);
+
+    if (movieIndex === -1) {
+      likedMovieIds.push(movie.id);
+      localStorage.setItem("likedMovies", JSON.stringify(likedMovieIds));
+    } else {
+      likedMovieIds.splice(movieIndex, 1);
+      localStorage.setItem("likedMovies", JSON.stringify(likedMovieIds));
+    }
+
+    setLikedMovies(likedMovieIds);
+  };
   return (
     <div className="containermoviecard">
       <h1 className="allmovies">Movies</h1>
@@ -269,31 +287,14 @@ export default function MoviesCard() {
         {filteredMovies.length > 0 ? (
           <div className="movies-card-box">
             {filteredMovies.map((movie) => (
-              <Link to={`/movie/${movie.id}`} key={movie.id}>
-                <div className="movies-card" key={movie.id}>
+              <div className="movies-card" key={movie.id}>
+                <Link
+                  className="linktodetails"
+                  to={`/movie/${movie.id}`}
+                  key={movie.id}
+                >
                   <div className="movies-card-image">
                     <img src={movie.posterUrl} alt={movie.title} />
-                    <div className="like">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-heart "
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path
-                          stroke="none"
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        ></path>
-                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-                      </svg>
-                    </div>
                     <div className="movies-card-genre">
                       {movie.genres.map((genre, index) => (
                         <React.Fragment key={`${movie.id}-${index}`}>
@@ -306,17 +307,43 @@ export default function MoviesCard() {
                       <p>{movie.imdb}</p>
                     </div>
                   </div>
-                  <div title={movie.title} className="movies-card-title">
-                    <h2>{movie.title}</h2>
-                  </div>
-                  <div title={movie.plot} className="movies-card-description">
-                    <p>{movie.plot}</p>
-                  </div>
-                  <div className="movies-card-year">
-                    <p>{movie.year}</p>
+                </Link>
+                <div title={movie.title} className="movies-card-title">
+                  <h2>{movie.title}</h2>{" "}
+                  <div
+                    className={`like ${
+                      likedMovies.includes(movie.id) ? "liked" : ""
+                    }`}
+                    onClick={() => handleLike(movie)}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`icon icon-tabler icon-tabler-heart ${
+                        likedMovies.includes(movie.id)
+                          ? "icon-tabler-heart-filled"
+                          : ""
+                      }`}
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                    </svg>
                   </div>
                 </div>
-              </Link>
+                <div title={movie.plot} className="movies-card-description">
+                  <p>{movie.plot}</p>
+                </div>
+                <div className="movies-card-year">
+                  <p>{movie.year}</p>
+                </div>
+              </div>
             ))}
           </div>
         ) : (

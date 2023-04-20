@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 .recommended-movies-container {
     border-top: 1px solid #e5e5e586;
     padding: 20px 0 0 0;
     margin: 20px 0 0 0;
+    font-family: 'Open Sans', sans-serif;
+}
 
+.recommended-movies-container .header-recommended {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 20px 0;
 }
 
 .recommended-movies {
@@ -15,4 +23,18 @@
 .recommended-movies img {
     width: 100px;
     height: 150px;
+}
+
+.recommended-genres {
+    position: absolute;
+    bottom: 5px;
+    right: 3px;
+    font-size: .6rem;
+}
+
+.recommended-genres span {
+    background-color: #000000ab;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }

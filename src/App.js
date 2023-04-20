@@ -1,6 +1,9 @@
 import React from "react";
 import "../src/components/styles/app.css";
-import Home from "./components/pages/home/home.js";
+import Navbar from "./components/pages/home/navbar";
+import Home from "./components/home.js";
+import Watched from "./components/watched.js";
+import Favorites from "./components/favorites.js";
 import MovieDetail from "./components/MovieDetails";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -8,8 +11,11 @@ export default function App() {
   return (
     <>
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/watched" component={Watched} />
+          <Route path="/favorites" component={Favorites} />
           <Route path="/movie/:id" component={MovieDetail} />
         </Switch>
       </Router>

@@ -16,9 +16,15 @@
     margin-bottom: .5rem;
     text-align: left;
     max-width: max-content;
-    background-color: #4a416cd8;
+    background-color: #292929e0;
     padding: 10px;
     border-radius: 3px;
+}
+
+.welcome-title h1 {
+    background: -webkit-linear-gradient(#eee, #808080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container-w {
@@ -94,6 +100,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
+    margin-bottom: .2rem;
 }
 
 .w-movies-card img {

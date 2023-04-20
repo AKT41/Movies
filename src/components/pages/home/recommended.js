@@ -16,15 +16,30 @@ function RecommendedMovies({ genre, id }) {
 
   return (
     <div className="recommended-movies-container">
-      <h2>Recommended Movies</h2>
-      <div className="recommended-movies">
+      <h2 className="header-recommended">Recommended Movies</h2>
+      <div className="welcome-container">
         {randomMovies.map((movie) => (
-          <div key={movie.id} className="   ">
-            <Link to={`/movies/${movie.id}`}>
-              <img src={movie.posterUrl} alt={movie.title} />{" "}
-              <span>{movie.genres}</span>
-            </Link>
-          </div>
+          <Link to={`/movie/${movie.id}`} key={movie.id}>
+            <div className="w-movies-card">
+              <div className="w-movies-card-image">
+                <img src={movie.posterUrl} alt={movie.title} />
+                <div className="w-movies-card-imbd">
+                  <p>{movie.imdb}</p>
+                </div>
+                <div className="recommended-genres">
+                  {movie.genres.slice(0,2).map((genre, index) => (
+                    <React.Fragment key={`${movie.id}-${index}`}>
+                      {index > 0 && " "}
+                      <span>{genre}</span>
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+              <div title={movie.title} className="w-movies-card-title">
+                <h2>{movie.title}</h2>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

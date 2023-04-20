@@ -31,7 +31,6 @@
 
 .movies-card-image {
     width: 100%;
-    /* height: 300px; */
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -55,6 +54,10 @@
     padding: 10px;
     font-size: 1.2rem;
     font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .movies-card-title h2 {
@@ -98,13 +101,14 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     right: 0;
     z-index: 997;
     transition: all 0.3s ease;
     padding: 10px;
     background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
     border-top-left-radius: 15px;
+    border-bottom-right-radius: 5px;
     user-select: none;
 }
 
@@ -185,16 +189,6 @@
     transform: rotate(360deg);
     transition: all 0.4s ease;
 }
-
-
-
-.like {
-    position: absolute;
-    top: 5px;
-    right: 8px;
-}
-
-
 
 .icon-tabler-heart-filled {
     fill: #ff0000;
@@ -394,4 +388,10 @@ body {
     color: #fff;
     text-transform: capitalize;
     cursor: pointer;
+}
+
+.linktodetails {
+    padding: 0;
+    margin: 0;
+    border: 0;
 }

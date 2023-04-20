@@ -1,0 +1,85 @@
+.watched-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.127);
+    border-radius: 5px;
+    margin-top: 4.5rem;
+}
+
+.w-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.127);
+    border-radius: 5px;
+}
+
+.watched-card {
+    background-color: rgba(158, 158, 158, 0.641);
+    border-radius: 5px;
+    max-width: 200px;
+}
+
+.watched-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.watched-image img {
+    width: 100%;
+    max-height: 300px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.watched-rating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f5c518;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 10px;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+}
+
+.remove {}
+
+.remove svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+.watched-image:hover>.watched-rating {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.watched-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    color: #000;
+}

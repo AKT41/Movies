@@ -164,7 +164,7 @@ export default function MoviesCard() {
               onChange={handleFilterChange}
               required="required"
             >
-              <option value="">IMDb</option>
+              <option value={0}>IMDb</option>
               <option value={5}>5+</option>
               <option value={6}>6+</option>
               <option value={7.5}>7.5+</option>
@@ -287,33 +287,99 @@ export default function MoviesCard() {
         {filteredMovies.length > 0 ? (
           <div className="movies-card-box">
             {filteredMovies.map((movie) => (
-              <div className="movies-card" key={movie.id}>
-                <Link
-                  className="linktodetails"
-                  to={`/movie/${movie.id}`}
-                  key={movie.id}
-                >
-                  <div className="movies-card-image">
-                    <img src={movie.posterUrl} alt={movie.title} />
-                    <div className="movies-card-genre">
-                      {movie.genres.map((genre, index) => (
-                        <React.Fragment key={`${movie.id}-${index}`}>
-                          {index > 0 && " "}
-                          <span>{genre}</span>
-                        </React.Fragment>
-                      ))}
+              <>
+                {" "}
+                <div className="movies-card" key={movie.id}>
+                  <Link
+                    className="linktodetails"
+                    to={`/movie/${movie.id}`}
+                    key={movie.id}
+                  >
+                    <div className="movies-card-image">
+                      <img src={movie.posterUrl} alt={movie.title} />
+                      <div className="movies-card-genre">
+                        {movie.genres.map((genre, index) => (
+                          <React.Fragment key={`${movie.id}-${index}`}>
+                            {index > 0 && " "}
+                            <span>{genre}</span>
+                          </React.Fragment>
+                        ))}
+                      </div>
+                      <div title="IMDB" className="movies-card-imbd">
+                        <p>{movie.imdb}</p>
+                      </div>
                     </div>
-                    <div title="IMDB" className="movies-card-imbd">
-                      <p>{movie.imdb}</p>
+                  </Link>
+                  <div title={movie.title} className="movies-card-title">
+                    <h2>{movie.title}</h2>{" "}
+                    <div
+                      className={`like ${
+                        likedMovies.includes(movie.id) ? "liked" : ""
+                      }`}
+                      onClick={() => handleLike(movie)}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className={`icon icon-tabler icon-tabler-heart ${
+                          likedMovies.includes(movie.id)
+                            ? "icon-tabler-heart-filled"
+                            : ""
+                        }`}
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2"
+                        stroke="currentColor"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                      </svg>
                     </div>
                   </div>
-                </Link>
-                <div title={movie.title} className="movies-card-title">
-                  <h2>{movie.title}</h2>{" "}
+                  <div title={movie.plot} className="movies-card-description">
+                    <p>{movie.plot}</p>
+                  </div>
+                  <div className="movies-card-year">
+                    <p>{movie.year}</p>
+                  </div>
+                </div>
+                <div className="mobile-card">
+                  <div className="mobile-card-image">
+                    <Link to={`/movie/${movie.id}`} key={movie.id}>
+                      <img src={movie.posterUrl} alt={movie.title} />
+                    </Link>
+                  </div>
+                  <div className="mobile-card-body">
+                    <div className="mobile-card-top">
+                      <div title={movie.title} className="mobile-card-title">
+                        <h2>
+                          {movie.title} <span>({movie.year})</span>
+                        </h2>
+                      </div>
+                    </div>
+                    <div className="mobile-card-bottom">
+                      <div title="IMDB" className="mobile-card-imbd">
+                        <p>{movie.imdb}</p>
+                      </div>
+                      <div className="mobile-card-genre">
+                        {movie.genres.map((genre, index) => (
+                          <React.Fragment key={`${movie.id}-${index}`}>
+                            {index > 0 && " "}
+                            <span>{genre}</span>
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                   <div
-                    className={`like ${
-                      likedMovies.includes(movie.id) ? "liked" : ""
-                    }`}
+                    className="like-mobile"
                     onClick={() => handleLike(movie)}
                   >
                     <svg
@@ -337,13 +403,7 @@ export default function MoviesCard() {
                     </svg>
                   </div>
                 </div>
-                <div title={movie.plot} className="movies-card-description">
-                  <p>{movie.plot}</p>
-                </div>
-                <div className="movies-card-year">
-                  <p>{movie.year}</p>
-                </div>
-              </div>
+              </>
             ))}
           </div>
         ) : (

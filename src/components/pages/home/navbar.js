@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import "../../styles/navbar.css";
 import { Link } from "react-router-dom";
 import { MoviesContext } from "../../../MoviesContext";
@@ -33,9 +33,16 @@ export default function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-logo">
-          <Link to="/">
-            <p>Yaska Movie</p>
-          </Link>
+          <span className="logo-main">
+            <Link to="/">
+              <p>Yaska Movie</p>
+            </Link>
+          </span>
+          <span className="logo-mobil">
+            <Link to="/">
+              <p>Y. M.</p>
+            </Link>
+          </span>
         </div>
         <div className="navbar-search">
           <input
@@ -96,34 +103,63 @@ export default function Navbar() {
         {displayStyle === "flex" && (
           <div className="displaystyle" style={{ display: displayStyle }}>
             {filteredMovies.map((movie) => (
-              <Link
-                to={`/movie/${movie.id}`}
-                key={movie.id}
-                onClick={handleClearClick}
-              >
-                <div className="movies-card" key={movie.id}>
-                  <div className="movies-card-image">
-                    <img src={movie.posterUrl} alt={movie.title} />
-                    <div className="movies-card-genre">
-                      {movie.genres
-                        .map((genre) => <span key={genre}>{genre}</span>)
-                        .reduce((prev, curr) => [prev, curr])}
+              <>
+                <Link
+                  to={`/movie/${movie.id}`}
+                  key={movie.id}
+                  onClick={handleClearClick}
+                >
+                  <div className="movies-card" key={movie.id}>
+                    <div className="movies-card-image">
+                      <img src={movie.posterUrl} alt={movie.title} />
+                      <div className="movies-card-genre">
+                        {movie.genres
+                          .map((genre) => <span key={genre}>{genre}</span>)
+                          .reduce((prev, curr) => [prev, curr])}
+                      </div>
+                    </div>
+                    <div title={movie.title} className="movies-card-title">
+                      <h2>{movie.title}</h2>
+                    </div>
+                    <div className="movies-card-description">
+                      <p>{movie.plot}</p>
+                    </div>
+                    <div className="movies-card-year">
+                      <p>{movie.year}</p>
+                    </div>
+                    <div className="movies-card-imbd">
+                      <p>{movie.imdb}</p>
                     </div>
                   </div>
-                  <div title={movie.title} className="movies-card-title">
-                    <h2>{movie.title}</h2>
+                </Link>
+                <div className="mobile-card navmobil">
+                  <div className="mobile-card-image">
+                    <Link to={`/movie/${movie.id}`} key={movie.id}>
+                      <img src={movie.posterUrl} alt={movie.title} />
+                    </Link>
                   </div>
-                  <div className="movies-card-description">
-                    <p>{movie.plot}</p>
-                  </div>
-                  <div className="movies-card-year">
-                    <p>{movie.year}</p>
-                  </div>
-                  <div className="movies-card-imbd">
-                    <p>{movie.imdb}</p>
+                  <div className="mobile-card-body">
+                    <div className="mobile-card-top">
+                      <div title={movie.title} className="mobile-card-title">
+                        <h2>{movie.title}</h2>
+                      </div>
+                    </div>
+                    <div className="mobile-card-bottom">
+                      <div title="IMDB" className="mobile-card-imbd">
+                        <p>{movie.imdb}</p>
+                      </div>
+                      <div className="mobile-card-genre">
+                        {movie.genres.map((genre, index) => (
+                          <React.Fragment key={`${movie.id}-${index}`}>
+                            {index > 0 && " "}
+                            <span>{genre}</span>
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </Link>
+              </>
             ))}
           </div>
         )}

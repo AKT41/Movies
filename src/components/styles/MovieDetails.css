@@ -150,8 +150,8 @@
 }
 
 .watchedpv svg {
-    width: 15px!important;
-    height: 15px!important;
+    width: 15px !important;
+    height: 15px !important;
     fill: #838383;
     transition: all 0.3s ease-in-out;
 }
@@ -165,4 +165,125 @@
     flex-direction: row;
     gap: 10px;
     align-items: center;
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 80%;
+    }
+
+    .details-container {
+        flex-direction: column;
+    }
+
+    .details-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .details-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        gap: 10px;
+    }
+
+    .details-title {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .details-title h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .details-title h1 span {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .details-title p {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .details-genres {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .details-genres span {
+        font-size: .8rem;
+        font-weight: 300;
+        background-color: #00000056;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .details-genres:hover span {
+        background-color: #000000;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .details-text-plot {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .details-text-plot h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .details-text-plot p {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.5rem;
+    }
+
+    .actors-directors {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .actors {
+        border-bottom: 1px solid #83838367;
+        padding-bottom: 10px;
+        width: 100%;
+        display: flex;
+
+    }
+
+    .details-page {
+        margin-top: 1rem;
+        background-color: transparent;
+    }
+
+    .watched-container {
+        background-color: transparent;
+    }
+
+    .watched-rating {
+        opacity: 1;
+    }
 }

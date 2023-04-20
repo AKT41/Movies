@@ -33,6 +33,7 @@
     margin: 2rem auto;
     padding: 1rem;
     border-radius: 5px;
+    text-align: center;
 }
 
 .container-w::before {
@@ -50,6 +51,7 @@
     background-size: contain;
     border-radius: 5px;
     opacity: 1;
+    text-align: center;
 }
 
 
@@ -134,7 +136,31 @@
     user-select: none;
 }
 
-.w-movies-card-image:hover>.w-movies-card-imbd {
+.w-movies-card-image:hover .w-movies-card-imbd {
     opacity: 1;
     transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-title {
+        font-size: 1.2rem;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .welcome-title h1 {
+        text-align: center;
+    }
+
+    .welcome-container {
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 2rem;
+
+    }
+
+    .w-movies-card-imbd  {
+        opacity: 1;
+    }
 }

@@ -395,3 +395,116 @@ body {
     margin: 0;
     border: 0;
 }
+
+.mobile-card {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    margin: .5rem auto;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(54, 81, 92, 0.689);
+    border-radius: 5px;
+    position: relative;
+}
+
+.mobile-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 100px;
+    padding: 0 10px;
+}
+
+.mobile-card-image {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5px;
+}
+
+.mobile-card-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mobile-card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.mobile-card-title span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.mobile-card-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.mobile-card-imbd {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    background-color: #f5c518;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.mobile-card-genre span {
+    font-weight: 500;
+    background-color: rgba(54, 81, 92, 0.689);
+    border-radius: 5px;
+    margin: auto 5px;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: .9rem;
+    padding: 0 5px;
+}
+
+.like-mobile {
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+
+.mobile-card {
+    width: 90%;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .active {
+        flex-direction: column;
+    }
+
+    .movies-card {
+        display: none;
+    }
+
+    .mobile-card {
+        display: flex;
+    }
+
+    .movies-card-box {
+        padding: 0;
+    }
+}

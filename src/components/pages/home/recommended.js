@@ -19,7 +19,7 @@ function RecommendedMovies({ genre, id }) {
       <h2 className="header-recommended">Recommended Movies</h2>
       <div className="welcome-container">
         {randomMovies.map((movie) => (
-          <Link to={`/movie/${movie.id}`} key={movie.id}>
+          <Link className="linkrecommend" to={`/movie/${movie.id}`} key={movie.id}>
             <div className="w-movies-card">
               <div className="w-movies-card-image">
                 <img src={movie.posterUrl} alt={movie.title} />

@@ -91,10 +91,13 @@ a {
 }
 
 .search-result {
-    width: 75rem;
+    max-width: 1200px;
+    width: 100%;
     overflow-y: scroll;
     margin: 0 auto;
     position: relative;
+    left: 0;
+    right: 0;
     display: none;
     justify-content: center;
     flex-direction: row;

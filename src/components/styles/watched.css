@@ -8,17 +8,50 @@
     gap: 10px;
     padding: 10px;
     margin: 0 auto;
-    width: 100%;
+    min-height: 90vh;
     max-width: 1200px;
     background-color: rgba(255, 255, 255, 0.127);
     border-radius: 5px;
     margin-top: 4.5rem;
+    width: 100%;
+}
+
+.watched-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.watched-container h2 span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.watcheds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row !important;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 5px;
 }
 
 .w-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     align-content: center;
@@ -26,14 +59,15 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
-    background-color: rgba(255, 255, 255, 0.127);
     border-radius: 5px;
 }
 
 .watched-card {
-    background-color: rgba(158, 158, 158, 0.641);
     border-radius: 5px;
     max-width: 200px;
+    width: 100%;
+    background-color: rgba(137, 137, 137, 0.673);
+    margin-bottom: 1rem;
 }
 
 .watched-image {
@@ -42,9 +76,17 @@
     position: relative;
 }
 
+.watched-image a {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 .watched-image img {
     width: 100%;
     max-height: 300px;
+    max-width: 250px;
+
     height: 100%;
     border-radius: 5px;
 }
@@ -63,23 +105,42 @@
     user-select: none;
 }
 
-.remove {}
-
 .remove svg {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 
-.watched-image:hover>.watched-rating {
+.watched-image>a:hover>.watched-rating {
     opacity: 1;
     transition: all 0.3s ease-in-out;
 }
 
-.watched-title {
+.watched-title p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
     color: #000;
+}
+
+.watched-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.not-found-fav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.127);
 }

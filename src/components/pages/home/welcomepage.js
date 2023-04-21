@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { MoviesContext } from "../../../MoviesContext";
-import "../../styles/Welcome.css";
+import "../../styles/welcome.css";
 import { Link } from "react-router-dom";
 
 function Welcome() {
@@ -9,7 +9,6 @@ function Welcome() {
     localStorage.getItem("selectedCategory") || "Drama"
   );
 
-  // Update the category every 5 minutes
   useEffect(() => {
     const intervalId = setInterval(() => {
       const categories = [

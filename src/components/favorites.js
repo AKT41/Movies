@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { MoviesContext } from "../MoviesContext";
-import "./styles/favorites.css";
+import "./styles/watched.css";
 import { Link } from "react-router-dom";
 
 export default function Favorites() {

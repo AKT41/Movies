@@ -22,6 +22,20 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    position: relative;
+}
+
+.like-details{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .runtime-imdb {
@@ -62,6 +76,7 @@
 .details-title h1 {
     font-size: 2rem;
     font-weight: 400;
+
 }
 
 .details-title h1 span {
@@ -189,11 +204,10 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
         padding: 0 20px;
         box-sizing: border-box;
-        gap: 10px;
+        gap: 1rem;
     }
 
     .details-title {
@@ -206,6 +220,9 @@
     .details-title h1 {
         font-size: 1.5rem;
         font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .details-title h1 span {
@@ -229,7 +246,7 @@
     .details-genres span {
         font-size: .8rem;
         font-weight: 300;
-        background-color: #00000056;
+        background-color: #000000;
         padding: 5px 10px;
         border-radius: 5px;
         transition: all 0.3s ease-in-out;
@@ -256,6 +273,11 @@
         font-size: 1rem;
         font-weight: 300;
         line-height: 1.5rem;
+    }
+
+    .runtime-imdb {
+        justify-content: space-around;
+        color: #fff;
     }
 
     .actors-directors {

@@ -65,6 +65,31 @@ export default function BackToTop() {
             transition: all 0.3s ease-in-out;
             z-index: 999;
         }
+        .back-to-top:hover {
+            background-color: #fff;
+            color: #000;
+            transition: all 0.3s ease-in-out;
+        }
+        .back-to-top:active {
+            transform: scale(0.9);
+            transition: all 0.3s ease-in-out;
+        }
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .back-to-top:hover {
+            animation: bounce 1s infinite;
+            transition: all 0.3s ease-in-out;
+        }
+
         `}
       </style>
     </div>

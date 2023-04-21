@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MoviesContext } from "../MoviesContext";
 import Loader from "./pages/loader";
-import "./styles/MovieDetails.css";
+import "./styles/movieDetails.css";
 import RecommendedMovies from "../components/pages/home/recommended";
 
 function formatTime(minutes) {
@@ -28,6 +28,9 @@ function MovieDetail() {
   const [watchedMovies, setWatchedMovies] = useState(
     JSON.parse(localStorage.getItem("watchedMovies")) || []
   );
+  const [likedMovies, setLikedMovies] = useState(
+    JSON.parse(localStorage.getItem("likedMovies")) || []
+  );
 
   useEffect(() => {
     const storedMovie = JSON.parse(localStorage.getItem(`movie-${id}`));
@@ -44,7 +47,8 @@ function MovieDetail() {
 
   useEffect(() => {
     localStorage.setItem("watchedMovies", JSON.stringify(watchedMovies));
-  }, [watchedMovies]);
+    localStorage.setItem("likedMovies", JSON.stringify(likedMovies));
+  }, [watchedMovies, likedMovies]);
 
   if (!movie) {
     return <Loader />;
@@ -58,7 +62,13 @@ function MovieDetail() {
       setWatchedMovies([...watchedMovies, movie.id]);
     }
   };
-
+  const handleLike = () => {
+    if (likedMovies.includes(movie.id)) {
+      setLikedMovies(likedMovies.filter((id) => id !== movie.id));
+    } else {
+      setLikedMovies([...likedMovies, movie.id]);
+    }
+  };
   return (
     <div className="container">
       <div className="details-page">
@@ -72,6 +82,45 @@ function MovieDetail() {
               <div className="imdb">
                 <p>IMDb: {movie.imdb}</p>
               </div>
+            </div>
+            <div className="like-details" onClick={handleLike}>
+              {likedMovies.includes(movie.id) && movie.id !== null ? (
+                <p className="likep">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-heart-filled"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                  </svg>
+                </p>
+              ) : (
+                <p className="likep">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-heart"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                  </svg>
+                </p>
+              )}
             </div>
           </div>
           <div className="details-text">
@@ -143,7 +192,6 @@ function MovieDetail() {
                 ))}
               </div>
             </div>
-
             <div className="details-text-plot">
               <h2>Overview</h2>
               <p>{movie.plot}</p>

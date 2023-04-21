@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MoviesContext } from "../MoviesContext";
 import Loader from "./pages/loader";
-import "./styles/movieDetails.css";
+import "./styles/MovieDetails.css";
 import RecommendedMovies from "../components/pages/home/recommended";
 
 function formatTime(minutes) {

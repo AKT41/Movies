@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { MoviesContext } from "../../../MoviesContext";
-import "../../styles/welcome.css";
+import "../../styles/Welcome.css";
 import { Link } from "react-router-dom";
 
 function Welcome() {

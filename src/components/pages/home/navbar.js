@@ -35,12 +35,12 @@ export default function Navbar() {
         <div className="navbar-logo">
           <span className="logo-main">
             <Link to="/">
-              <p>Yaska Movie</p>
+              <p>Movie Logo</p>
             </Link>
           </span>
           <span className="logo-mobil">
             <Link to="/">
-              <p>Y. M.</p>
+              <p>Logo</p>
             </Link>
           </span>
         </div>
